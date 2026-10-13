@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>考え方｜まとめノート</title>
+<meta name="description" content="考えることは、才能ではなく順番だった。自分の考え方のくせ、観察から検証までの手順、三つの問い、解像度の上げ方、期待値で決めること、答えではなく問いを残すことをまとめた個人的なノート。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f7f7f9;--surface:#fff;--ink:#22232b;--muted:#61636f;--faint:#9a9caa;--line:#e2e3ea;--accent:#4a5ba8;--wash:#eceef7}
+  @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121318;--surface:#1a1c23;--ink:#e8e9f0;--muted:#a6a8b6;--faint:#686b7a;--line:#2a2c36;--accent:#9aa8e8;--wash:#1d2030}}
+  :root[data-theme="dark"]{--bg:#121318;--surface:#1a1c23;--ink:#e8e9f0;--muted:#a6a8b6;--faint:#686b7a;--line:#2a2c36;--accent:#9aa8e8;--wash:#1d2030}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.95 "Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:44rem;margin:auto;padding:0 16px} @media(min-width:640px){.wrap{padding:0 24px}}
+  a{color:inherit}
+  .top{padding-top:24px}
+  .back{font-size:.75rem;color:var(--muted);text-decoration:none}.back:hover{color:var(--ink)}
+
+  header{padding:68px 0 44px;border-bottom:1px solid var(--line)}
+  .kicker{margin:0 0 16px;font-size:.7rem;letter-spacing:.24em;color:var(--accent);font-weight:700}
+  h1{font:600 clamp(2rem,5.6vw,3rem)/1.45 "Noto Serif JP",serif;margin:0 0 6px;letter-spacing:.04em}
+  .mn-tagline{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(1.05rem,2.6vw,1.4rem);line-height:1.75;margin:.1em 0 1.1em;opacity:.85}
+  .lead{margin:0;max-width:34em;color:var(--muted)}
+  .toc{display:flex;flex-wrap:wrap;gap:6px 16px;margin:24px 0 0;padding:0;list-style:none;font-size:.82rem}
+  .toc a{color:var(--accent);text-decoration:none}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .sec-n{display:block;font-size:.7rem;letter-spacing:.2em;color:var(--accent);font-weight:700;margin-bottom:6px}
+  h2{font:600 1.5rem/1.5 "Noto Serif JP",serif;margin:0 0 16px;letter-spacing:.03em}
+  h3{font:600 1.08rem/1.6 "Noto Serif JP",serif;margin:28px 0 10px}
+  p{margin:0 0 16px}
+  .pull{margin:22px 0;padding:4px 0 4px 18px;border-left:2px solid var(--accent);font:500 1.12rem/1.8 "Noto Serif JP",serif}
+
+  .flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:16px 0 18px;font-size:.86rem}
+  .flow span{padding:6px 12px;background:var(--wash);border-radius:999px}
+  .flow span.key{background:var(--accent);color:var(--bg)}
+  .flow i{font-style:normal;color:var(--faint)}
+
+  ul.points{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:10px}
+  ul.points li{padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:4px;font-size:.94rem}
+  ul.points b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;margin-bottom:2px}
+  ul.points span{color:var(--muted)}
+
+  .q3{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0}
+  @media(min-width:640px){.q3{grid-template-columns:repeat(3,1fr)}}
+  .q3 div{padding:18px;background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--accent);border-radius:4px}
+  .q3 small{display:block;font-size:.66rem;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:4px}
+  .q3 b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.06rem;margin-bottom:6px}
+  .q3 p{margin:0;font-size:.9rem;color:var(--muted)}
+
+  .pair{display:grid;grid-template-columns:1fr;gap:12px;margin:16px 0}
+  @media(min-width:640px){.pair{grid-template-columns:1fr 1fr}}
+  .pair div{padding:16px 18px;border:1px solid var(--line);border-radius:4px;background:var(--surface)}
+  .pair h4{margin:0 0 4px;font-size:.72rem;letter-spacing:.16em;color:var(--accent)}
+  .pair p{margin:0;font-size:.92rem;color:var(--muted)}
+
+  ol.steps{margin:14px 0 0;padding-left:1.4em;color:var(--muted)}
+  ol.steps li{margin:0 0 6px}
+
+  .note{padding:26px;background:var(--wash);border-radius:4px}
+  .note h2{font-size:1.24rem}
+  .note ul{margin:12px 0 0;padding-left:1.2em}
+  .note li{margin:0 0 9px}
+
+  .src{border-top:1px solid var(--line);margin-top:16px}
+  .src a{display:flex;justify-content:space-between;gap:14px;padding:10px 2px;border-bottom:1px solid var(--line);text-decoration:none;font-size:.92rem}
+  .src a:hover{color:var(--accent)}
+  .src small{color:var(--faint);font-size:.76rem;white-space:nowrap}
+
+  footer{padding:34px 0 60px;color:var(--faint);font-size:.76rem}
+  footer .related{color:var(--muted);font-size:.86rem;margin-bottom:16px}
+  footer .related a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="top"><a class="back" href="../">← m-note トップ</a></div>
+  <header>
+    <p class="kicker">THINKING</p>
+    <h1>考え方</h1>
+    <p class="mn-tagline">考えることは、才能ではなく順番だった。</p>
+    <p class="lead">頭がいい人の思考を分解してみると、特別な力ではなく、回している手順があるだけだった。自分の考え方のくせを知り、手順を持ち、決め方を外に出す。そして、答えより問いを残していく。そのためのノートです。</p>
+    <ul class="toc">
+      <li><a href="#habit">自分の考え方のくせ</a></li>
+      <li><a href="#os">考える手順</a></li>
+      <li><a href="#three">三つの問い</a></li>
+      <li><a href="#resolution">解像度を上げる</a></li>
+      <li><a href="#decide">決める</a></li>
+      <li><a href="#question">問いを残す</a></li>
+      <li><a href="#open">まだ確かめていること</a></li>
+    </ul>
+  </header>
+
+  <section id="habit">
+    <span class="sec-n">01</span>
+    <h2>自分の考え方のくせ</h2>
+    <p class="pull">考えるより先に、イメージが浮かぶ。</p>
+    <p>何かを考えようとすると、目の前の景色とは別に、頭の中に絵や場面が一瞬浮かぶ。言葉より先にイメージがあり、それを材料に考えが広がっていく。そして頭が一瞬「真っ白」になったあと、「あ、こういうことだ」と思いついた瞬間には、もう言葉として口から出ている。</p>
+    <div class="flow"><span>何かを見る</span><i>→</i><span>イメージを材料にする</span><i>→</i><span>考えが広がる</span><i>→</i><span class="key">「あ、こういうことだ」</span><i>→</i><span>そのまま言葉になる</span></div>
+    <ul class="points">
+      <li><b>見ながら考える</b><span>頭の中だけで考えるより、数字や図、景色など、目の前にあるものを材料にすると考えが進む。目を閉じると、今度は頭の中で自分に問いかける声が出てくる。</span></li>
+      <li><b>考えるのではなく、出てくる環境をつくる</b><span>アイデアが浮かぶのは、歩いているとき、電車の中、泳いでいるとき、人と話しているとき。手は動いていても、頭に余白がある時間。会話では言葉にしようとするうちに考えが整理され、話し終えたあとにも思考は続いている。</span></li>
+      <li><b>見えているのは、選ばれた世界</b><span>目には広い範囲が入っているのに、意識を向けているのはそのごく一部。視野に入っている情報、注意を向けた情報、記憶に残る情報は、それぞれ違う。自分には見えていないものがある、という前提で考える。</span></li>
+    </ul>
+  </section>
+
+  <section id="os">
+    <span class="sec-n">02</span>
+    <h2>考える手順</h2>
+    <p class="pull">情報が足りないから見えないのではない。自分がどこから見ているかが、見えるものを決めている。</p>
+    <p>戦略コンサルタントの思考を分解すると、才能ではなく順番だった。順番なら、真似できる。いちばん効くのは、途中で<strong>前提を疑う</strong>一手です。</p>
+    <div class="flow"><span>観察する</span><i>→</i><span>視点を変える</span><i>→</i><span>構造化する</span><i>→</i><span>仮説を立てる</span><i>→</i><span class="key">前提を疑う</span><i>→</i><span>素早く検証する</span><i>→</i><span>勝ち筋を見つける</span></div>
+    <h3>手順の中で使う道具</h3>
+    <ul class="points">
+      <li><b>コンテクスト</b><span>物事の意味や価値は、それが置かれた文脈で決まる。いま自分はどの文脈から見ているのかを確かめる。</span></li>
+      <li><b>パーセプション</b><span>事実そのものと、その事実がどう受け取られているかを分けて考える。</span></li>
+      <li><b>鳥の目・虫の目・魚の目</b><span>俯瞰する、細部に潜る、流れを読む。一つの見方に留まらない。</span></li>
+      <li><b>イシューツリー</b><span>大きな問いを、答えられる大きさまで割っていく。</span></li>
+      <li><b>パターン認識 × 批判的思考</b><span>人は「これは前に見た〇〇に似ている」と考える。速いけれど、早く決めすぎると先入観になる。だから疑う力と組み合わせる。</span></li>
+    </ul>
+  </section>
+
+  <section id="three">
+    <span class="sec-n">03</span>
+    <h2>三つの問い</h2>
+    <p>手順を一言の問いにすると、覚えやすく、いつでも取り出せる。</p>
+    <div class="q3">
+      <div><small>BIG PICTURE</small><b>そもそも全体はどうなっている？</b><p>いま見ているテーマを、一段上のレイヤーから見る。部分最適に落ちるのは、視点が中に入りすぎているとき。</p></div>
+      <div><small>RULE OF THE GAME</small><b>結局、何に勝てばいい？</b><p>これは何を競うゲームなのか。勝敗を決める要因が分かれば、努力の向け先が決まる。</p></div>
+      <div><small>QUICK &amp; DIRTY</small><b>本質だけ残したら、何が言えそう？</b><p>精度を上げてから動くのではなく、粗いまま早く形にして、そこから直す。</p></div>
+    </div>
+    <h3>仮説のつくり方</h3>
+    <div class="flow"><span>アブダクション<br><small>この事実を最もうまく説明する仮説は？</small></span><i>→</i><span>思考実験</span><i>→</i><span>反証</span></div>
+    <p>最後に「この仮説の真偽を判断するために、最低限何を調べればいいか」と問う。全部を調べようとしないところが肝心です。なお「ルール・オブ・ザ・ゲーム」は比喩としての考え方で、相手の出方を読み合うゲーム理論とは別物。混ぜると議論が濁ります。</p>
+  </section>
+
+  <section id="resolution">
+    <span class="sec-n">04</span>
+    <h2>解像度を上げる</h2>
+    <p class="pull">細かく見るのではなく、全体と細部を行き来する。</p>
+    <p>解像度が高い人は、未来の構想を語るだけでなく、それに必要な規模まで数字に落としている。ただし解像度を上げることは、細部だけを見ることではありません。</p>
+    <div class="pair">
+      <div><h4>縦の解像度</h4><p>一つのことを深く掘る。数字・事実・具体例に落とし、「なぜ？」「本当に？」を重ねる。</p></div>
+      <div><h4>横の解像度</h4><p>範囲を広げる。周りとの関係や、全体の構造の中での位置を見る。</p></div>
+    </div>
+    <div class="flow"><span>全体を見る</span><i>→</i><span>問いを決める</span><i>→</i><span>分解する</span><i>→</i><span>数字に落とす</span><i>→</i><span>深掘りする</span><i>→</i><span>因果を見る</span><i>→</i><span>全体に組み直す</span><i>→</i><span>現場で確かめる</span></div>
+    <p>「もっと成果を出したい」のような抽象的な目標も、「売上＝顧客の数×単価」と割れば、何をどれだけすればよいかが見えてくる。そして自分の仮説だけで完結させず、現実と照らし合わせて直していきます。</p>
+  </section>
+
+  <section id="decide">
+    <span class="sec-n">05</span>
+    <h2>決める</h2>
+    <p class="pull">計算より、入れる数字のほうが難しい。</p>
+    <p>デシジョンツリーは、選択肢とその先の未来を木の形に描く「地図」。期待値（確率×結果の合計）は、各選択肢の価値を測る「ものさし」。手法はどちらも単純で、計算は誰がやっても同じ答えになります。</p>
+    <p>違いが出るのは、そこへ入れる確率と結果のほう。成功確率を30%と置くか50%と置くかで、結論はひっくり返る。だから期待値は、判断を自動化する道具ではなく、<strong>自分がどんな前提で世界を見ているかを、数字の形で外に出す道具</strong>です。外に出せば、人と議論できる。地図とものさしがあっても、歩くかどうかは別に決めなければなりません。</p>
+    <ol class="steps">
+      <li>シナリオを木の形に整理する</li>
+      <li>それぞれの確率を見積もる</li>
+      <li>それぞれの結果を見積もる</li>
+      <li>期待値を計算する</li>
+      <li>リスクを確かめる</li>
+      <li>長い目で見た方向と合っているかを確かめる</li>
+    </ol>
+    <p style="margin-top:18px">日々の判断の考え方——迷ったら「どちらが楽しいか」に戻る、誰に考えてもらうかを自分で選ぶ——は、<a href="../way-of-life/#decide">生き方</a>にまとめています。</p>
+  </section>
+
+  <section id="question">
+    <span class="sec-n">06</span>
+    <h2>答えではなく、問いを残す</h2>
+    <p class="pull">見終わった瞬間に完結するより、そこから考える時間が始まるほうに惹かれる。</p>
+    <p>DNA、複式簿記、量子力学、脳。ジャンルは違っても、同じ面白さを感じている。惹かれているのは複雑さそのものではなく、<strong>シンプルな構造から複雑なものが生まれる仕組み</strong>。終わったあとも「これは何だったのか」という問いが残り、考察が次々に生まれるものが好きです。</p>
+    <p>自分の考えも同じように扱う。いまの最適解は「答え」ではなく<strong>現時点の仮説</strong>。過去の自分と考えが変わっていても、それは失敗ではない。なぜ変わったのかを残すことに価値がある。</p>
+    <div class="flow"><span>考える</span><i>→</i><span>記録する</span><i>→</i><span>見える形にする</span><i>→</i><span>気づく</span><i>→</i><span class="key">仮説を更新する</span><i>→</i><span>試す</span><i>→</i><span>結果を見る</span><i>→</i><span>また考える</span></div>
+  </section>
+
+  <section id="open">
+    <div class="note">
+      <h2>このノートで、まだ確かめていること</h2>
+      <ul>
+        <li>「考える」という行為は、実際にはどうやって生まれているのか</li>
+        <li>アイデアが生まれる場面（歩く・電車・泳ぐ・話す）に共通するものは、他にもあるのか</li>
+        <li>「いま自分はどの文脈から見ているか」を、日常的に確かめる方法はないか</li>
+        <li>どこまで単純にしても、本質は保てるのか</li>
+        <li>解像度はどこまで上げれば十分か。上げすぎて決めるのが遅くなることと、どう釣り合いをとるか</li>
+        <li>確率の見積もりの精度は、どうやって上げられるのか</li>
+        <li>私たちは世界を見ているのか、それとも脳が選んでつくった世界を見ているのか</li>
+      </ul>
+    </div>
+  </section>
+
+  <section style="border-bottom:none">
+    <h2 style="font-size:1.2rem">このノートの元になったつぶやき</h2>
+    <nav class="src">
+      <a href="../musings/posts/p124.html">答えではなく、問いを残す<small>2026.09.17</small></a>
+      <a href="../musings/posts/p117.html">細かくではなく、行き来する<small>2026.09.12</small></a>
+      <a href="../musings/posts/p110.html">記録ではなく、循環をつくる<small>2026.09.06</small></a>
+      <a href="../musings/posts/p093.html">考えるのではなく、出てくる環境をつくる<small>2026.08.27</small></a>
+      <a href="../musings/posts/p085.html">脳が選択して構成した世界<small>2026.08.25</small></a>
+      <a href="../musings/posts/p084.html">頭の中が一瞬、真っ白になる<small>2026.08.25</small></a>
+      <a href="../musings/posts/p044.html">同じ情報から、違うものが見える<small>2026.07.30</small></a>
+      <a href="../musings/posts/p043.html">結局、何に勝てばいい？<small>2026.07.30</small></a>
+      <a href="../musings/posts/p040.html">計算より、入れる数字のほうが難しい<small>2026.07.27</small></a>
+    </nav>
+  </section>
+
+  <footer>
+    <p class="related">あわせて読む：<a href="../brain/">脳</a> ・ <a href="../philosophy/">哲学</a> ・ <a href="../way-of-life/">生き方</a> ・ <a href="../management/">経営戦略</a></p>
+    <p>専門家ではない個人が、自分の実践と思考を書きとめたノートです。内容の正確性を保証するものではありません。</p>
+    <p><a class="back" href="../">← m-note トップ</a></p>
+  </footer>
+</main>
+</body>
+</html>
