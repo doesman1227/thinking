@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>考え方｜まとめノート</title>
-<meta name="description" content="考えることは、才能ではなく順番だった。自分の考え方のくせ、観察から検証までの手順、三つの問い、解像度の上げ方、期待値で決めること、答えではなく問いを残すことをまとめた個人的なノート。">
+<meta name="description" content="考えることは、才能ではなく順番だった。自分の考え方のくせ、観察から検証までの手順、三つの問い、解像度の上げ方、期待値で決めること、答えではなく問いを残すこと、心を整えるマインドフルネスと認知行動療法をまとめた個人的なノート。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;600;700&display=swap" rel="stylesheet">
@@ -73,6 +73,15 @@
   footer{padding:34px 0 60px;color:var(--faint);font-size:.76rem}
   footer .related{color:var(--muted);font-size:.86rem;margin-bottom:16px}
   footer .related a{color:var(--accent)}
+  .subs{display:grid;grid-template-columns:1fr;gap:12px;margin:18px 0 0}
+  @media(min-width:640px){.subs{grid-template-columns:1fr 1fr}}
+  .subs a{display:block;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:4px;text-decoration:none}
+  .subs a:hover{border-color:var(--accent)}
+  .subs small{display:block;font-size:.66rem;letter-spacing:.16em;color:var(--accent);font-weight:700;margin-bottom:2px}
+  .subs b{display:block;font-family:"Noto Serif JP",serif;font-weight:600;font-size:1.1rem;margin-bottom:6px}
+  .subs span{display:block;font-size:.9rem;color:var(--muted);line-height:1.8}
+  .subs em{display:block;margin-top:8px;font-style:normal;font-size:.8rem;color:var(--accent)}
+
 </style>
 </head>
 <body>
@@ -82,7 +91,7 @@
     <p class="kicker">THINKING</p>
     <h1>考え方</h1>
     <p class="mn-tagline">考えることは、才能ではなく順番だった。</p>
-    <p class="lead">頭がいい人の思考を分解してみると、特別な力ではなく、回している手順があるだけだった。自分の考え方のくせを知り、手順を持ち、決め方を外に出す。そして、答えより問いを残していく。そのためのノートです。</p>
+    <p class="lead">頭がいい人の思考を分解してみると、特別な力ではなく、回している手順があるだけだった。自分の考え方のくせを知り、手順を持ち、決め方を外に出す。そして、答えより問いを残していく。心が揺れたときに整える、マインドフルネスと認知行動療法のノートも、ここに置いています。</p>
     <ul class="toc">
       <li><a href="#habit">自分の考え方のくせ</a></li>
       <li><a href="#os">考える手順</a></li>
@@ -90,6 +99,7 @@
       <li><a href="#resolution">解像度を上げる</a></li>
       <li><a href="#decide">決める</a></li>
       <li><a href="#question">問いを残す</a></li>
+      <li><a href="#tune">心を整える実践</a></li>
       <li><a href="#open">まだ確かめていること</a></li>
     </ul>
   </header>
@@ -176,6 +186,17 @@
     <div class="flow"><span>考える</span><i>→</i><span>記録する</span><i>→</i><span>見える形にする</span><i>→</i><span>気づく</span><i>→</i><span class="key">仮説を更新する</span><i>→</i><span>試す</span><i>→</i><span>結果を見る</span><i>→</i><span>また考える</span></div>
   </section>
 
+  <section id="tune">
+    <span class="sec-n">07</span>
+    <h2>心を整える実践</h2>
+    <p class="pull">考えを止めて、いまに気づく。考えを外に出して、確かめる。</p>
+    <p>考える手順を持っていても、心が揺れているときは、考えそのものが偏っていく。そんなときに使える二つの方法を、それぞれのノートにまとめています。</p>
+    <div class="subs">
+      <a href="../mindfulness/"><small>MINDFULNESS</small><b>マインドフルネス</b><span>いまこの瞬間に、評価せずに気づく。呼吸や歩く瞑想などの実践と、ACT・セルフアクセプタンス・仏教とのつながり。</span><em>ノートを開く →</em></a>
+      <a href="../cbt/"><small>COGNITIVE BEHAVIORAL THERAPY</small><b>認知行動療法</b><span>頭の中の自動思考をとらえ、事実かどうかを確かめる。認知のかたより、コラム法、エビデンスと限界。</span><em>ノートを開く →</em></a>
+    </div>
+  </section>
+
   <section id="open">
     <div class="note">
       <h2>このノートで、まだ確かめていること</h2>
@@ -207,7 +228,7 @@
   </section>
 
   <footer>
-    <p class="related">あわせて読む：<a href="../brain/">脳</a> ・ <a href="../philosophy/">哲学</a> ・ <a href="../way-of-life/">生き方</a> ・ <a href="../management/">経営戦略</a></p>
+    <p class="related">あわせて読む：<a href="../emotions/">感情</a> ・ <a href="../brain/">脳</a> ・ <a href="../philosophy/">哲学</a> ・ <a href="../way-of-life/">生き方</a> ・ <a href="../management/">経営戦略</a></p>
     <p>専門家ではない個人が、自分の実践と思考を書きとめたノートです。内容の正確性を保証するものではありません。</p>
     <p><a class="back" href="../">← m-note トップ</a></p>
   </footer>
